@@ -6,7 +6,7 @@ import { Comment } from '../../models/comment.module';
 @Component({
   selector: 'app-add-comment',
   templateUrl: './add-comment.component.html',
-  styleUrls: ['./add-comment.component.css']
+  styleUrls: ['./add-comment.component.css'],
 })
 export class AddCommentComponent implements OnInit {
   @Input() isVisible: boolean = false;
@@ -31,12 +31,19 @@ export class AddCommentComponent implements OnInit {
   onSubmit(form: NgForm) {
     if (form.valid) {
       if (this.editComment) {
-        this.commentService.updateComment(this.comment.id, this.comment).subscribe(response => {
-          this.entryAdded.emit(response);
+        if (this.comment.id > 500) {
+          this.entryAdded.emit(this.comment);
           this.close();
-        });
+        } else {
+          this.commentService
+            .updateComment(this.comment.id, this.comment)
+            .subscribe((response) => {
+              this.entryAdded.emit(response);
+              this.close();
+            });
+        }
       } else {
-        this.commentService.addComment(this.comment).subscribe(response => {
+        this.commentService.addComment(this.comment).subscribe((response) => {
           this.entryAdded.emit(response);
           this.close();
         });
