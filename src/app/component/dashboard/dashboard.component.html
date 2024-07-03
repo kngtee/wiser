@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <div class="dashboard-view d-flex">
+    <div class="side-nav-content">
+      <ul class="nav-list">
+        <li class="nav-list-item" *ngFor="let item of list">
+          <a
+            [routerLink]="item.link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ item.name }}</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="dashboard-left-view">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

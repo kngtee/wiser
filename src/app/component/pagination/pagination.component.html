@@ -1,0 +1,10 @@
+<div class="pagination">
+  <span>Row per page: 10</span>
+  <div class="d-flex right-side">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <span>{{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>

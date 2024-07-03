@@ -1,0 +1,53 @@
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    color: #7F7F7F;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table td {
+    color: #121212;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.display-area {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: fit-content;
+    margin-right: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    background-color: white;
+}
+
+.new-entry-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #8158F3;
+    color: white;
+    border: none;
+    font-size: 14px;
+}
+
+.edit-btn {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background-color: #8158f33a;
+    border: none;
+    color: #8158F3;
+    font-size: 12px;
+    cursor: pointer;
+}

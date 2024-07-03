@@ -1,0 +1,29 @@
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 2
+}
+
+main {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.black-border{
+    border: 1px solid black;
+}
+
+app-dashboard {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
